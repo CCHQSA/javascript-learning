@@ -3,25 +3,58 @@
   <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
+    <style>
+      .buttons-container {
+        width: 200px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        column-gap: 5px;
+        row-gap: 5px;
+      }
+
+      .calculator-button {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: none;
+      }
+
+      .calculator-button-zero {
+        width: 100%;
+        height: 100%;
+        grid-column: span 2;
+        border-radius: 1000px;
+        border: none;
+      }
+
+
+    </style>
   </head>
   <body>
     <p class="calculator-row"></p>
-    <button class="calculator-button" onclick="calculate('1')">1</button>
-    <button class="calculator-button" onclick="calculate('2')">2</button>
-    <button class="calculator-button" onclick="calculate('3')">3</button>
-    <button class="calculator-button" onclick="calculate('4')">4</button>
-    <button class="calculator-button" onclick="calculate('5')">5</button>
-    <button class="calculator-button" onclick="calculate('6')">6</button>
-    <button class="calculator-button" onclick="calculate('7')">7</button>
-    <button class="calculator-button" onclick="calculate('8')">8</button>
-    <button class="calculator-button" onclick="calculate('9')">9</button>
-    <button class="calculator-button" onclick="calculate('0')">0</button>
-    <button class="calculator-button" onclick="calculate('+')">+</button>
-    <button class="calculator-button" onclick="calculate('-')">-</button>
-    <button class="calculator-button" onclick="calculate('*')">*</button>
-    <button class="calculator-button" onclick="calculate('/')">/</button>
-    <button class="calculator-button" onclick="getRes()">=</button>
-    <button class="calculator-button" onclick="clearDisplay()">C</button>
+      <div class="buttons-container">
+        <button class="calculator-button operation-button" onclick="deleteLast()">D</button>        
+        <button class="calculator-button operation-button" onclick="clearDisplay()">C</button>
+        <button class="calculator-button operation-button" onclick="calculate('%')">%</button>
+        <button class="calculator-button operation-button" onclick="calculate('/')">/</button>
+        <button class="calculator-button" onclick="calculate('7')">7</button>
+        <button class="calculator-button" onclick="calculate('8')">8</button>
+        <button class="calculator-button" onclick="calculate('9')">9</button>
+        <button class="calculator-button operation-button" onclick="calculate('*')">*</button>
+        <button class="calculator-button" onclick="calculate('4')">4</button>
+        <button class="calculator-button" onclick="calculate('5')">5</button>
+        <button class="calculator-button" onclick="calculate('6')">6</button>  
+        <button class="calculator-button operation-button" onclick="calculate('-')">-</button>         
+        <button class="calculator-button" onclick="calculate('1')">1</button>
+        <button class="calculator-button" onclick="calculate('2')">2</button>
+        <button class="calculator-button" onclick="calculate('3')">3</button>
+        <button class="calculator-button operation-button" onclick="calculate('+')">+</button>
+        <button class="calculator-button-zero" onclick="calculate('0')">0</button>
+        <button class="calculator-button operation-button" onclick="calculate('.')">.</button>
+        <button class="calculator-button operation-button" onclick="getRes()">=</button>
+
+    </div>
     <script src="simpleCalculator.js" defer></script>
   </body>
 </html>

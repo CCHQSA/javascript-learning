@@ -27,3 +27,7 @@ function clearDisplay() {
     display.textContent = expression;
 }
 
+function deleteLast() {
+    expression = expression.slice(0, -1);
+    display.textContent = expression;
+}

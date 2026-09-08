@@ -1,0 +1,10 @@
+{
+  "name": "inventory-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "filterInventory.js",
+  "scripts": {
+    "start": "node filterInventory.js"
+  },
+  "type": "module"
+}
